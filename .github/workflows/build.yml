@@ -41,4 +41,7 @@ jobs:
       run: |
         export PYTHONPATH=$(pwd)  # Set PYTHONPATH to the current directory
         pytest  # Run your tests
-
+        
+    - name: Build Docker image
+      run: |
+        docker build -t my-python-app .
