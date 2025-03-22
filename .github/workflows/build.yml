@@ -55,11 +55,11 @@ jobs:
   
     - name: Tag Docker image
       run: |
-        docker tag my-python-app ${{ secrets.DOCKER_USERNAME }}/my-python-app:latest
+        docker tag my-python-app ${{ secrets.DOCKER_HUB_USERNAME }}/my-python-app:latest
     
     - name: Push Docker image to Docker Hub
       run: |
-        docker push ${{ secrets.DOCKER_USERNAME }}/my-python-app:latest
+        docker push ${{ secrets.DOCKER_HUB_USERNAME }}/my-python-app:latest
     
     - name: Run Docker image (Optional)
       run: |
