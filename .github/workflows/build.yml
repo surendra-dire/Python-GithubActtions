@@ -64,3 +64,5 @@ jobs:
     - name: Run Docker image (Optional)
       run: |
         docker run -d --name  my-python-app-container -p 5555:5000 my-python-app:latest
+        docker ps
+        curl localhost:5000
