@@ -31,7 +31,13 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
         
     - name: Install distutils
-      run: sudo python3 -m ensurepip --upgrade
+      run: |
+        sudo apt update
+        sudo apt install python3-pip
+        
+        sudo python3 -m ensurepip --upgrade
+
+
 
 
       
