@@ -31,7 +31,8 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
         
     - name: Install distutils
-      run: sudo apt-get install python3-distutils
+      run: sudo python3 -m ensurepip --upgrade
+
 
       
     - name: Lint with flake8
